@@ -4,6 +4,7 @@ import 'package:news_app/routes.dart';
 
 import 'binding/initial_bindings.dart';
 import 'core/const_data/routes.dart';
+import 'core/service/localization_service.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +17,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        initialBinding: InitialBindings(),
-        getPages: routes,
-        initialRoute: Routes.homeScreen);
+      debugShowCheckedModeBanner: false,
+      translations: LocalizationService(),
+      locale: Locale('en', 'US'), // Default locale
+      fallbackLocale: Locale('en', 'US'), // Fallback locale
+      initialBinding: InitialBindings(),
+      getPages: routes,
+      initialRoute: Routes.settingScreen,
+      theme: ThemeData(
+        fontFamily: 'Cairo', // Set Cairo as the default font family
+      ),
+    );
   }
 }

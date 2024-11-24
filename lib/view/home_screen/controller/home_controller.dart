@@ -3,16 +3,15 @@ import 'package:get/get.dart';
 class HomeController extends GetxController {
   int count = 0;
 
-  GetData(                   ) {
+  GetData() {
     count++;
 
-    update(                   );
+    update();
   }
 
   @override
-  void onInit(                   ) {
-    GetData(                   );
-    // TODO: implement onInit
-    super.onInit(                   );
+  void onInit() {
+    GetData();
+    super.onInit();
   }
 }
