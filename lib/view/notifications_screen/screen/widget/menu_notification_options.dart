@@ -14,7 +14,7 @@ class MenuNotificationOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(2.0),
       child: Container(
         width: MediaQuery.sizeOf(context).width,
         child: Column(
@@ -24,7 +24,7 @@ class MenuNotificationOptions extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(
-                  width: 10.w,
+                  width: 5.w,
                 ),
                 InkWell(
                   onTap: () {},

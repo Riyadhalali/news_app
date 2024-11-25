@@ -73,7 +73,9 @@ class SettingScreen extends StatelessWidget {
               height: 30.h,
             ),
             MenuSettingsItem(
-              onTap: () {},
+              onTap: () {
+                Get.toNamed('/settingsOptionScreen');
+              },
               textButton: 'الخيارات',
               iconPath: AppImage.settingsIcon,
             ),
