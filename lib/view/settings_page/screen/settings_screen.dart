@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/const_data/app_image.dart';
 import 'package:news_app/core/const_data/my_size.dart';
+import 'package:news_app/view/settings_page/screen/widget/menu_settings_item.dart';
+import 'package:responsive_kakapo/responsive_kakapo.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -35,17 +37,21 @@ class SettingScreen extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 35,
+                    backgroundImage: AssetImage(AppImage.profileImage),
                   ),
                   SizedBox(
-                    width: 2,
+                    width: 2.w,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "   رياض العلي",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15.0),
+                        child: Text(
+                          "ريم العلي",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 16),
+                        ),
                       ),
                       TextButton(
                         onPressed: () {},
@@ -60,91 +66,32 @@ class SettingScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 30.h,
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: MediaQuery.sizeOf(context).width,
-                child: Row(
-                  children: [
-                    Icon(Icons.settings),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text("خيارات"),
-                    Spacer(),
-                    Icon(Icons.navigate_next)
-                  ],
-                ),
-              ),
+            MenuSettingsItem(
+              textButton: 'الخيارات',
+              iconPath: AppImage.settingsIcon,
             ),
             SizedBox(
-              height: 20,
+              height: 20.h,
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: MediaQuery.sizeOf(context).width,
-                child: Row(
-                  children: [
-                    Icon(Icons.notifications),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text("التنبيهات"),
-                    Spacer(),
-                    Icon(Icons.navigate_next)
-                  ],
-                ),
-              ),
+            MenuSettingsItem(
+              textButton: 'التنبيهات',
+              iconPath: AppImage.notificationsIcon,
             ),
             SizedBox(
-              height: 20,
+              height: 20.h,
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: MediaQuery.sizeOf(context).width,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Icon(Icons.help),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text("حول التطبيق"),
-                    Spacer(),
-                    Icon(Icons.navigate_next)
-                  ],
-                ),
-              ),
+            MenuSettingsItem(
+              textButton: 'حول التطبيق',
+              iconPath: AppImage.questionIcon,
             ),
             SizedBox(
-              height: 20,
+              height: 20.h,
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: MediaQuery.sizeOf(context).width,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Icon(Icons.settings),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "تسجيل خروج",
-                      style: TextStyle(
-                          fontSize: MySize.fontSizeMd,
-                          fontWeight: FontWeight.normal),
-                    ),
-                    Spacer(),
-                    Icon(Icons.navigate_next)
-                  ],
-                ),
-              ),
+            MenuSettingsItem(
+              textButton: 'تسجيل خروج',
+              iconPath: AppImage.settingsIcon,
             )
           ],
         ),

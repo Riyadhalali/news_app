@@ -232,6 +232,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  responsive_kakapo:
+    dependency: "direct main"
+    description:
+      name: responsive_kakapo
+      sha256: "55794d768d92790e5d7929bb0eaa8856decb145b305a2d313551452faea48305"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1"
   shared_preferences:
     dependency: "direct main"
     description:

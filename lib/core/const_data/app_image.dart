@@ -19,4 +19,6 @@ class AppImage {
       "assets/screens/settings_screen/settings.png"; // settings page
   static String exitIcon =
       "assets/screens/settings_screen/exit.png"; // settings page
+  static String profileImage =
+      "assets/screens/settings_screen/profileImage.png"; // settings page
 }
