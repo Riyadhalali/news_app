@@ -1,3 +1,5 @@
+import 'package:responsive_kakapo/responsive_kakapo.dart';
+
 class MySize {
   static const double sm = 8.0;
   static const double md = 16.0;
@@ -11,7 +13,7 @@ class MySize {
 
   //fon size
 
-//  static const double fontSizeSm = 12.0;
+  static const double fontSizeSm = 14.0;
   static const double fontSizeMd = 16.0;
   // static const double fontSizeLg = 18.0;
   // static const double fontSizeXl = 22.0;

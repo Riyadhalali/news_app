@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:news_app/core/const_data/app_image.dart';
 import 'package:news_app/core/const_data/my_size.dart';
-import 'package:news_app/view/settings_page/screen/widget/menu_settings_item.dart';
 import 'package:responsive_kakapo/responsive_kakapo.dart';
+
+import 'widget/menu_settings_item.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -16,7 +18,9 @@ class SettingScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           leading: IconButton(
-              onPressed: () {}, icon: Image.asset(AppImage.backIcon)),
+            onPressed: () {},
+            icon: Image.asset(AppImage.backIcon),
+          ),
           actions: [
             IconButton(
               onPressed: () {},
@@ -45,8 +49,8 @@ class SettingScreen extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 15.0),
+                      const Padding(
+                        padding: EdgeInsets.only(right: 15.0),
                         child: Text(
                           "ريم العلي",
                           style: TextStyle(
@@ -55,7 +59,7 @@ class SettingScreen extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           'تعديل الملف الشخصي',
                           style: TextStyle(color: Colors.black),
                         ),
@@ -69,6 +73,7 @@ class SettingScreen extends StatelessWidget {
               height: 30.h,
             ),
             MenuSettingsItem(
+              onTap: () {},
               textButton: 'الخيارات',
               iconPath: AppImage.settingsIcon,
             ),
@@ -76,6 +81,9 @@ class SettingScreen extends StatelessWidget {
               height: 20.h,
             ),
             MenuSettingsItem(
+              onTap: () {
+                Get.toNamed('/notificationScreen');
+              },
               textButton: 'التنبيهات',
               iconPath: AppImage.notificationsIcon,
             ),
@@ -83,6 +91,7 @@ class SettingScreen extends StatelessWidget {
               height: 20.h,
             ),
             MenuSettingsItem(
+              onTap: () {},
               textButton: 'حول التطبيق',
               iconPath: AppImage.questionIcon,
             ),
@@ -90,6 +99,7 @@ class SettingScreen extends StatelessWidget {
               height: 20.h,
             ),
             MenuSettingsItem(
+              onTap: () {},
               textButton: 'تسجيل خروج',
               iconPath: AppImage.settingsIcon,
             )
